@@ -1,0 +1,22 @@
+<div ng-controller="CategoriesIndex">
+    <div class="row"><a href="#!/categories/new" class="btn btn-primary">Create Category</a></div>
+    <div class="row" style="margin-top: 10px;">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="category in categories">
+                    <td>{{category.name}}</td>
+                    <td style="width: 20%;">
+                        <a href="#!/categories/update/{{category.$id}}" class="btn btn-warning">Update</a>
+                        <a href="" ng-click="removeCategory(category.$id, category)" class="btn btn-danger" ng-controller="CategoriesDelete">Remove</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

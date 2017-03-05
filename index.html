@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body ng-app="collectify">
+    <header-directive></header-directive>
+
+    <div class="container">
+      <div class="starter-template">
+            <div ng-view></div>
+      </div>
+    </div>
+
+    <footer-directive></footer-directive>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Vendors -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="src/config/main.js"></script>
+    <script src="src/config/routing.js"></script>
+
+    <!-- Controllers -->
+    <script src="src/controllers/itemsController.js"></script>
+    <script src="src/controllers/categoriesController.js"></script>
+
+    <!-- Directives -->
+    <script src="src/directives/homeDirective.js"></script>
+
+    <!-- Services -->
+    <script src="src/services/itemsProvider.js"></script>
+    <script src="src/services/categoriesProvider.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDAzip80FQUAaIbgT1vv1Q2PD0rsmuJCMs",
+        authDomain: "testangular-3e06e.firebaseapp.com",
+        databaseURL: "https://testangular-3e06e.firebaseio.com",
+        storageBucket: "testangular-3e06e.appspot.com",
+        messagingSenderId: "423797122563"
+      };
+      firebase.initializeApp(config);
+  </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<form ng-controller="CategoriesUpdate">
+    <div class="form-group">
+        <label for="name" class="control-label">Name</label>
+        <input type="text" class="form-control" ng-model="category.name">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success" ng-click="updateCategory(category)">Update</button>
+    </div>
+</form>

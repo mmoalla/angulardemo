@@ -28,14 +28,18 @@
     <!-- Vendors -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/angularfire/dist/angularfire.js"></script>
     <script src="src/config/main.js"></script>
     <script src="src/config/routing.js"></script>
+    <script src="src/config/cookies.js"></script>
 
     <!-- Controllers -->
     <script src="src/controllers/itemsController.js"></script>
     <script src="src/controllers/categoriesController.js"></script>
+    <script src="src/controllers/authController.js"></script>
 
     <!-- Directives -->
     <script src="src/directives/homeDirective.js"></script>
@@ -43,6 +47,7 @@
     <!-- Services -->
     <script src="src/services/itemsProvider.js"></script>
     <script src="src/services/categoriesProvider.js"></script>
+    <script src="src/services/authProvider.js"></script>
 
     <script>
       // Initialize Firebase

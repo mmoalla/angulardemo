@@ -4,13 +4,19 @@ app
 .directive ('headerDirective', function () {
     return {
         element: 'E',
-        templateUrl: 'views/header.html'
+        templateUrl: 'views/elements/header.html'
     }
 })
 .directive ('footerDirective', function () {
     return {
         element: 'E',
-        templateUrl: 'views/footer.html'
+        templateUrl: 'views/elements/footer.html'
+    }
+})
+.directive ('alertDirective', function () {
+    return {
+        element: 'E',
+        templateUrl: 'views/elements/alert.html'
     }
 });
 

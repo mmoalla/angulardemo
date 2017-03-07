@@ -1,11 +1,11 @@
 'use strict'
 
-app.config(function ($routeProvider){
+app.config(['$routeProvider', function ($routeProvider){
     $routeProvider
         .when('/', {
-            templateUrl : 'views/home.html'
+            templateUrl : 'views/elements/home.html'
         })
-        .when('/items/', {
+        .when('/items', {
             controller: 'ItemsIndex',
             templateUrl: 'views/items/index.html'
         })
@@ -17,7 +17,7 @@ app.config(function ($routeProvider){
             controller: 'ItemsUpdate',
             templateUrl: 'views/items/update.html'
         })
-        .when('/categories/', {
+        .when('/categories', {
             controller: 'CategoriesIndex',
             templateUrl: 'views/categories/index.html'
         })
@@ -28,5 +28,9 @@ app.config(function ($routeProvider){
         .when('/categories/update/:id', {
             controller: 'CategoriesUpdate',
             templateUrl: 'views/categories/update.html'
+        })
+        .when('/signup', {
+            controller: 'SignUp',
+            templateUrl: 'views/auths/signup'
         });
-});
+}]);

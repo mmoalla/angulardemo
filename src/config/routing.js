@@ -31,6 +31,6 @@ app.config(['$routeProvider', function ($routeProvider){
         })
         .when('/signup', {
             controller: 'SignUp',
-            templateUrl: 'views/auths/signup'
+            templateUrl: 'views/auths/signup.html'
         });
 }]);

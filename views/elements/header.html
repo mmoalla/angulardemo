@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" ng-controller="Home">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,8 +13,11 @@
             </li>
         </ul>
         <ul class="navbar-nav float-right">
-            <li class="nav-item">
-                <a class="nav-link" href="#!/signup">Sign Up</a>
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" id="dropdownnav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome {{logged.username}}</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownnav" ng-controller="Logout">
+                    <a class="dropdown-item" href="" ng-click="logout()">Logout</a>
+                </div>
             </li>
         </ul>
     </div>

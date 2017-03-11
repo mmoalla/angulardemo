@@ -1,6 +1,7 @@
-<div id="alert" class="alert alert-success alert-dismissible fade show" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
+<div id="alert-success" class="alert alert-success" role="alert" ng-show="message.success">
     {{message.success}}
+</div>
+
+<div id="alert-error" class="alert alert-danger" role="alert" ng-if="message.error" ng-show="message.error">
+    {{message.error}}
 </div>

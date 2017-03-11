@@ -1,22 +1,24 @@
-<div ng-controller="SignUp">
-    <alert-directive ng-show="message"></alert-directive>
-
-    <form id="formSignUp" name="formSignUp" ng-submit="signUp(user)" novalidate>
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" ng-model="user.username" name="username" class="form-control" autofocus required="required">
-            <span ng-messages="formSignUp.username.$error" ><p ng-message="required" class="form-text text-muted">* Username is required</p></span>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" ng-model="user.password" name="password" class="form-control" required="required" minlength="8">
-            <span ng-messages="formSignUp.password.$error">
-                <p ng-message="required" class="form-text text-muted">* Password is required</p>
-                <p ng-message="minlength" class="form-text text-muted">* Password must contain at least 8 caratcters</p>
-            </span>
-        </div>
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="Sign UP" ng-disabled="formSignUp.username.$invalid || formSignUp.password.$invalid">
-        </div>
-    </form>
+<div ng-controller="SignUp" class="card login">
+    <alert-directive></alert-directive>
+    <div class="card-header card-inverse card-primary"><h1><center>Sign UP</center></h1></div>
+    <div class="card-block">
+        <form id="formSignUp" name="formSignUp" ng-submit="signUp(user)" novalidate>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" ng-model="user.username" name="username" class="form-control" autofocus required="required">
+                <span ng-messages="formSignUp.username.$error" ><p ng-message="required" class="form-text text-muted">* Username is required</p></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" ng-model="user.password" name="password" class="form-control" required="required" minlength="8">
+                <span ng-messages="formSignUp.password.$error">
+                    <p ng-message="required" class="form-text text-muted">* Password is required</p>
+                    <p ng-message="minlength" class="form-text text-muted">* Password must contain at least 8 caratcters</p>
+                </span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Sign UP" ng-disabled="formSignUp.username.$invalid || formSignUp.password.$invalid">
+            </div>
+        </form>
+    </div>
 </div>

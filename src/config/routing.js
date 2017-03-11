@@ -2,32 +2,39 @@
 
 app.config(['$routeProvider', function ($routeProvider){
     $routeProvider
-        .when('/', {
-            templateUrl : 'views/elements/home.html'
+        .when('/admin', {
+            templateUrl: 'views/templates/admin.html'
         })
-        .when('/items', {
+        .when('/admin/items', {
             controller: 'ItemsIndex',
             templateUrl: 'views/items/index.html'
         })
-        .when('/items/new', {
+        .when('/admin/items/new', {
             controller: 'ItemsCreate',
             templateUrl: 'views/items/create.html'
         })
-        .when('/items/update', {
+        .when('/admin/items/update', {
             controller: 'ItemsUpdate',
             templateUrl: 'views/items/update.html'
         })
-        .when('/categories', {
+        .when('/admin/categories', {
             controller: 'CategoriesIndex',
             templateUrl: 'views/categories/index.html'
         })
-        .when('/categories/new', {
+        .when('/admin/categories/new', {
             controller: 'CategoriesCreate',
             templateUrl: 'views/categories/create.html'
         })
-        .when('/categories/update/:id', {
+        .when('/admin/categories/update/:id', {
             controller: 'CategoriesUpdate',
             templateUrl: 'views/categories/update.html'
+        })
+        .when('/', {
+            controller: 'Login',
+            templateUrl : 'views/auths/login.html'
+        })
+        .when('/home', {
+            templateUrl: 'views/templates/default.html'
         })
         .when('/signup', {
             controller: 'SignUp',

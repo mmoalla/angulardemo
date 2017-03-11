@@ -10,19 +10,13 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body ng-app="collectify">
-    <header-directive></header-directive>
-
-    <div class="container">
-      <div class="starter-template">
-            <div ng-view></div>
-      </div>
-    </div>
-
-    <footer-directive></footer-directive>
+    
+    <div ng-view></div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     
     <!-- Vendors -->
@@ -34,9 +28,9 @@
     <script src="bower_components/angularfire/dist/angularfire.js"></script>
     <script src="src/config/main.js"></script>
     <script src="src/config/routing.js"></script>
-    <script src="src/config/cookies.js"></script>
 
     <!-- Controllers -->
+    <script src="src/controllers/defaultController.js"></script>
     <script src="src/controllers/itemsController.js"></script>
     <script src="src/controllers/categoriesController.js"></script>
     <script src="src/controllers/authController.js"></script>

@@ -1,6 +1,6 @@
 'use strict'
 
-app.service('categoriesProvider', ['$firebaseArray', '$firebaseObject', function ($firebaseArray, $firebaseObject, $location, $routeParams){
+app.service('categoriesProvider', ['$firebaseArray', function ($firebaseArray){
     var ref = firebase.database().ref('categories');
     var categories = $firebaseArray(ref);
 

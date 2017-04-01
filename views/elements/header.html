@@ -1,24 +1,20 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" ng-controller="Home">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">TestAngular</a>
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#!/categories">Categories</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#!/items">Items</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav float-right">
-            <li class="nav-item dropdown">
-                <a href="" class="nav-link dropdown-toggle" id="dropdownnav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome {{logged.username}}</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownnav" ng-controller="Logout">
-                    <a class="dropdown-item" href="" ng-click="logout()">Logout</a>
-                </div>
-            </li>
-        </ul>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#!/">Blog</a>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <ul class="navbar-nav float-right">
+                <li class="nav-item dropdown">
+                    <!--<a href="" class="nav-link dropdown-toggle" id="dropdownnav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome {{logged.username}}</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownnav" ng-controller="Logout">
+                        <a class="dropdown-item" href="" ng-click="logout()">Logout</a>
+                    </div>-->
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>

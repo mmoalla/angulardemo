@@ -18,7 +18,7 @@ app
             categoriesProvider.updateCategory(category);
         }
     })
-    .controller('CategoriesDelete', function($scope, $firebaseObject, $location, $routeParams){
+    .controller('CategoriesDelete', function($scope, $firebaseObject, $location){
         $scope.removeCategory = function(id, category){
             var conf = confirm("Are you sur you want to delete " + category.name + " ?");
             if(conf == true){

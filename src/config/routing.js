@@ -1,43 +1,81 @@
-'use strict'
-
+'use strict';
 app.config(['$routeProvider', function ($routeProvider){
     $routeProvider
+        .when('/', {
+            templateUrl: 'views/home.html',
+            controller: 'HomeController'
+        })
+        .when('/login', {
+            templateUrl: 'views/auth/login.html'
+        })
         .when('/admin', {
-            templateUrl: 'views/templates/admin.html'
+            templateUrl: 'views/admin.html',
+            controller: 'AdminController',
+            resolve: {
+                logged: function (authProvider) {
+                    return authProvider.authorize();
+                }
+            }
         })
         .when('/admin/items', {
-            controller: 'ItemsIndex',
-            templateUrl: 'views/items/index.html'
+            templateUrl: 'views/items/index.html',
+            controller: 'ItemsController',
+            resolve: {
+                logged: function (authProvider) {
+                    return authProvider.authorize();
+                }
+            }
         })
         .when('/admin/items/new', {
-            controller: 'ItemsCreate',
-            templateUrl: 'views/items/create.html'
+            templateUrl: 'views/items/create.html',
+            controller: 'ItemsCreateController',
+            resolve: {
+                logged: function (authProvider) {
+                    return authProvider.authorize();
+                }
+            }
         })
         .when('/admin/items/update', {
-            controller: 'ItemsUpdate',
-            templateUrl: 'views/items/update.html'
+            templateUrl: 'views/items/update.html',
+            controller: 'ItemsUpdateController',
+            resolve: {
+                logged: function (authProvider) {
+                    return authProvider.authorize();
+                }
+            }
         })
         .when('/admin/categories', {
+            templateUrl: 'views/categories/index.html',
             controller: 'CategoriesIndex',
-            templateUrl: 'views/categories/index.html'
+            resolve: {
+                logged: function (authProvider) {
+                    return authProvider.authorize();
+                }
+            }
         })
         .when('/admin/categories/new', {
+            templateUrl: 'views/categories/create.html',
             controller: 'CategoriesCreate',
-            templateUrl: 'views/categories/create.html'
+            resolve: {
+                logged: function (authProvider) {
+                    return authProvider.authorize();
+                }
+            }
         })
         .when('/admin/categories/update/:id', {
+            templateUrl: 'views/categories/update.html',
             controller: 'CategoriesUpdate',
-            templateUrl: 'views/categories/update.html'
+            resolve: {
+                logged: function (authProvider) {
+                    return authProvider.authorize();
+                }
+            }
         })
-        .when('/', {
-            controller: 'Login',
-            templateUrl : 'views/auths/login.html'
+        .when('/404', {
+            templateUrl: 'views/errors/404.html'
         })
-        .when('/home', {
-            templateUrl: 'views/templates/default.html'
+        .otherwise({
+            redirectTo: '/404'
         })
-        .when('/signup', {
-            controller: 'SignUp',
-            templateUrl: 'views/auths/signup.html'
-        });
+    ;
 }]);

@@ -1,0 +1,22 @@
+<div class="card login" ng-controller="LoginController">
+    <alert-directive></alert-directive>
+    <div class="card-header card-inverse card-primary">
+        <h1 style="text-align: center;">Administration</h1>
+    </div>
+    <div class="card-block">
+        <form name="loginForm" ng-submit="login(user)" novalidate>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control" ng-model="user.username" autofocus required="required">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" ng-model="user.password" required="required">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" ng-disabled="loginForm.username.$invalid || loginForm.password.$invalid">
+            </div>
+            <!--<div class="form-group"><a href="#!/signup" class="btn btn-success" style="display: block;width: 100%;">Subscribe</a></div>-->
+        </form>
+    </div>
+</div>

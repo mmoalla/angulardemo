@@ -1,14 +1,18 @@
-<div ng-controller="CategoriesIndex">
-    <div class="row"><a href="#!/categories/new" class="btn btn-primary">Create Category</a></div>
-    <div class="row" style="margin-top: 10px;">
-        <table class="table table-bordered">
-            <thead>
+<header-admin-directive></header-admin-directive>
+<div class="container-fluid">
+    <div class="row"><sidebar-admin-directive></sidebar-admin-directive></div>
+    <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" ng-controller="CategoriesIndex">
+        <h1>Categories</h1>
+        <div class="row"><a href="#!/categories/new" class="btn btn-primary">Create Category</a></div>
+        <div class="row" style="margin-top: 10px;">
+            <table class="table table-bordered">
+                <thead>
                 <tr>
                     <th>Name</th>
                     <th></th>
                 </tr>
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
                 <tr ng-repeat="category in categories">
                     <td>{{category.name}}</td>
                     <td style="width: 20%;">
@@ -16,7 +20,8 @@
                         <a href="" ng-click="removeCategory(category.$id, category)" class="btn btn-danger" ng-controller="CategoriesDelete">Remove</a>
                     </td>
                 </tr>
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </div>
+    </main>
 </div>

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 app.service('categoriesProvider', ['$firebaseArray', function ($firebaseArray){
     var ref = firebase.database().ref('categories');
@@ -6,12 +6,12 @@ app.service('categoriesProvider', ['$firebaseArray', function ($firebaseArray){
 
     this.getCategories = function(){
         return  categories;
-    }
+    };
 
     this.createCategory = function(category){
         categories.$add(category);
         window.location.href = "#!/categories";
-    }
+    };
 
     this.updateCategory = function(category){
         var child = ref.child('categories');
@@ -21,5 +21,5 @@ app.service('categoriesProvider', ['$firebaseArray', function ($firebaseArray){
         }).then(function() {
             window.location.href = "#!/categories";
         });
-    }
+    };
 }]);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr"  ng-app="blog">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,17 +8,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
+    <title>Blog</title>
   </head>
-  <body ng-app="collectify">
-    
-    <div ng-view></div>
+  <body>
+    <ng-view></ng-view>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/tether/dist/js/tether.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    
+
     <!-- Vendors -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
@@ -30,13 +30,14 @@
     <script src="src/config/routing.js"></script>
 
     <!-- Controllers -->
-    <script src="src/controllers/defaultController.js"></script>
+    <script src="src/controllers/authController.js"></script>
+    <script src="src/controllers/homeController.js"></script>
+    <script src="src/controllers/adminController.js"></script>
     <script src="src/controllers/itemsController.js"></script>
     <script src="src/controllers/categoriesController.js"></script>
-    <script src="src/controllers/authController.js"></script>
 
     <!-- Directives -->
-    <script src="src/directives/homeDirective.js"></script>
+    <script src="src/directives/blogDirective.js"></script>
 
     <!-- Services -->
     <script src="src/services/itemsProvider.js"></script>

@@ -2,10 +2,6 @@ body {
   padding-top: 50px;
 }
 
-.starter-template {
-  padding: 40px 0;
-}
-
 .footer {
   position: absolute;
   bottom: 0;
@@ -15,8 +11,25 @@ body {
   background-color: #f5f5f5;
 }
 
+.sidebar{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px 0;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0;
+}
+
+.nav-link:hover{
+    color: #fff;
+    background-color: #0275d8;
+}
+
 .login{
-    width: 25%;
-    margin: 0 auto;
-    margin-top: 80px;
+    width: 400px;
+    margin: 120px auto;
 }

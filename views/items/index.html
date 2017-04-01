@@ -1,24 +1,34 @@
-<div ng-controller="ItemsIndex">
-    <div class="row"><a href="#!/items/new" class="btn btn-primary">Create Item</a></div>
-    <div class="row" style="margin-top: 10px;">
-        <table class="table table-bordered">
-            <thead>
+<header-admin-directive></header-admin-directive>
+<div class="container-fluid">
+    <div class="row"><sidebar-admin-directive></sidebar-admin-directive></div>
+    <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" ng-controller="ItemsController">
+        <h1>Items</h1>
+        <div class="row">
+            <!--<a href="#!/items/new" class="btn btn-primary">Create Item</a>-->
+            <a href="" class="btn btn-primary" data-toggle="modal" data-target="#modalItem">Create Item</a>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <table class="table table-bordered">
+                <thead>
                 <tr>
                     <th>Name</th>
                     <th>Category</th>
                     <th></th>
                 </tr>
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
                 <tr ng-repeat="item in items" ng-model="items">
                     <td>{{item.name}}</td>
                     <td><span class="badge badge-info">{{item.category_name}}</span></td>
                     <td style="width: 20%;">
-                        <a href="#!/items/update" class="btn btn-warning">Update</a>
-                        <a href="" class="btn btn-danger">Remove</a>
+                        <!--<a href="#!/admin/items/update" class="btn btn-warning">Update</a>-->
+                        <a href="" class="btn btn-warning" ng-click="updateCategory(item.$id, item)" ng-controller="ItemsUpdateController">Update</a>
+                        <a href="" class="btn btn-danger" ng-click="removeCategory(item.$id, item)" ng-controller="ItemsDeleteController">Remove</a>
                     </td>
                 </tr>
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </div>
+        <modal-directive></modal-directive>
+    </main>
 </div>
